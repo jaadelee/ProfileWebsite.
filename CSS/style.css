@@ -1,0 +1,156 @@
+#wrapper {display: grid; grid-template-areas: 
+"nav header header"
+"nav image image"
+"nav footer footer"} /* grid template area to show where nav goes */
+
+#nav {grid-area: nav; background-color: #3E9980; padding: 25px; list-style-type: none;
+  margin: 0; 
+  display: block; 
+  width: 100px; height: 100%; 
+  position: fixed; /* nav bar doesn't move*/
+  overflow: hidden; /* doesn't scroll when there's too much content for a area */
+} /* nav settings */
+
+li:hover{
+  background-color: darkseagreen;
+  color:darkseagreen;
+} /* nav bar options change when hover */
+
+#header {grid-area: header; padding: 25px; text-align: center; font: Georgia; color:#3E9980} 
+#image {grid-area: imaage; align-content: left}
+
+#footer {grid-area: footer;
+background-color: darkgreen;
+  text-align: center;
+  padding: 25px; position:absolute;
+   bottom:0;
+   width:100%;
+   height:20px; 
+   background: #3E9980;
+color: white} /* footer properties */
+
+#wrapper2 {display: grid; grid-template-areas: 
+    "contentgrid"; background-color: white;align-content: center} /* nav bar on background page */
+
+#contentgrid {display: grid; grid-template-areas: 
+"header1"
+"content1"
+"content2"
+"content3"; padding: 25px; color: white; align-content: center} /* content layout for background page */
+
+#header1 {grid-area: header1; background-color: darkseagreen; text-align: center;padding: 25px; font-weight: bold; font-size: 50px;} /* background page header */
+
+#content1 {grid-area: content1; background-color: darkseagreen;text-align: center; padding: 25px} /* background content */
+
+#content2 {grid-area: content2; background-color: darkseagreen; padding: 25px;text-align: center;} /* background content */
+
+#content3 {grid-area: content3; background-color: darkseagreen; padding: 25px;text-align: center;} /* background content */
+
+#contenttitle {font-weight: bold; font-style: italic} /* background content */
+
+#socialgrid {display: grid; grid-template-areas: 
+"h1"
+"h2"
+    "socialcontent"; color: darkgreen; background-color: darkseagreen}/*  social media page settings */
+#h2 {text-align: left; grid-area: h2; padding-left: 200px} /* sub header position */
+#h1 {text-align: left; grid-area: h1; font-weight: bold; font-size: 20px; padding-left: 200px} /* header position */
+#socialcontent {grid-area: socialcontent; text-align: left; padding-left: 200px} /* social media content position */
+pic {padding-left: 170px;
+padding-bottom: 10px; } /* layout settings for photo on socials */
+
+#educationgrid {display: grid; grid-template-areas: 
+"h3"
+"h4"
+"schools"; text-align: left;padding-left: 200px; } /* education page layout */
+#h3 {grid-area: h3; font-weight: bold; color: darkgreen; font-size: 30px} /* header settings */
+#h4 {grid-area: h4; font-weight: bold; color: darkgreen; font-size: 25px} /* subheader settings */ 
+
+#schools {display: grid; grid-template-areas: 
+"penguin penguin penguinpics"
+"mission mission missionpics"
+"shelly shelly shellypics"
+"sis sis sispics"
+"bdsc bdsc bdscpics"; text-align: center; color: darkgreen; } /* schools layout */
+
+
+#penguin {grid-area: penguin; border: 1px solid darkgreen; text-align: left; padding: 25px}
+#penguinpics {grid-area: penguinpics} /* code for presentation of penguins section */
+
+#mission {grid-area: mission; border: 1px solid darkgreen; text-align: left; padding: 25px}
+#missionpics {grid-area: missionpics} /* code for presentation of mission heights section */
+
+#shelly {grid-area: shelly;border: 1px solid darkgreen; text-align: left; padding: 25px}
+#shellypics {grid-area: shellypics} /* code for presentation of shelly park section */
+ 
+#sis {grid-area: sis; border: 1px solid darkgreen; text-align: left; padding: 25px}
+#sispics {grid-area: sispics} /* code for presentation of somerville section */
+
+#bdsc {grid-area: bdsc; border: 1px solid darkgreen; text-align: left; padding: 25px}
+#bdscpics {grid-area: bdscpics} /* code for presentation of bdsc section */
+
+.justified-grid-gallery {
+  --space: 4px;
+  --min-height: 190px;
+  --last-row-background:none;
+} /* gallery layout */
+
+.justified-grid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: var(--space);
+  list-style: none;
+  margin: 0 !important;
+  padding-left: 200px;
+} /* gallery layout */
+
+.justified-grid-gallery > * {
+  flex-grow: calc(var(--width) * (100000 / var(--height)));
+  flex-basis: calc(var(--min-height) * (var(--width) / var(--height)));
+  aspect-ratio: var(--width) / var(--height);
+  position: relative;
+  overflow: hidden;
+  margin: 0 !important; 
+  padding: 0 !important;
+} /* gallery settings */
+
+.justified-grid-gallery > * > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} /* gallery layout */
+
+.justified-grid-gallery::after {
+  content: " ";
+  flex-grow: 1000000000;
+    background: var(--last-row-background);} /* gallery layout */
+
+#footergal {
+background-color: darkgreen;
+  text-align: center;
+  padding: 25px; position:fixed;
+   bottom:0;
+   width:100%;
+   height:20px; 
+   background: #3E9980;
+    color: white;} /* footer settings for gallery page */
+
+#cogrid {display: grid; grid-template-areas: 
+"header5"
+"collection"}
+header5 {grid-area: header5; text-align: center; padding-left: 30px; font-weight: bold; font-size: 50px; color:darkgreen} /* layout settings for cocurriculars page */
+
+#collection {display: grid; grid-template-areas: 
+"tech media cafe arts" 
+"dit worm rat world";  padding-left: 100px} /* grid settings for cocurriculars grid */
+
+#tech {grid-area: tech; align-content: center; text-align: center; padding-left: 200px; } /* layout settings for tech section */
+
+span {background-color: mediumseagreen; text-align:} /* layout settings for text on corcurricular sections */
+
+#media {grid-area: media; text-align: center} /* layout settings for media comm. section */
+#cafe {grid-area: cafe; text-align: center} /* layout settings for cafe section */
+#arts {grid-area: arts; text-align: center} /* layout settings for arts comm. section */
+#dit {grid-area: dit; text-align: center; padding-left: 200px; padding-top: 30px} /* layout settings for dit club section */
+#worm {grid-area: worm; text-align: center;padding-top: 30px} /* layout settings for wormfarm section */
+#rat {grid-area: rat; text-align: center;padding-top: 30px} /* layout settings for rat trap section */
+#world {grid-area: world; text-align: center;padding-top: 30px} /* layout settings for world vision section */
